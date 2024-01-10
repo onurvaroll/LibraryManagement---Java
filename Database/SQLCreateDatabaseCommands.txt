@@ -1,0 +1,67 @@
+# create database named "library"
+CREATE DATABASE library;
+
+# create admin table
+CREATE TABLE admin (
+    USER_ID INT AUTO_INCREMENT,
+    NAME VARCHAR(50),
+    PASSWORD VARCHAR(50),
+    CONTACT VARCHAR(50),
+    PRIMARY KEY (USER_ID)
+);
+
+# insert admin user
+INSERT INTO admin (NAME, PASSWORD, CONTACT)
+# you can change variables
+VALUES ('admin', 'password', 'contact_info');
+
+# create borrow book table
+CREATE TABLE bookings (
+    BOOKING_ID INT AUTO_INCREMENT,
+    BOOK_NAME VARCHAR(50),
+    STUDENT_ID VARCHAR(50),
+    START_DATE VARCHAR(50),
+    END_DATE VARCHAR(50),
+    PRIMARY KEY (BOOKING_ID)
+);
+
+# create book table
+CREATE TABLE books (
+    BOOK_ID INT AUTO_INCREMENT,
+    CATEGORY VARCHAR(50),
+    NAME VARCHAR(50),
+    AUTHOR VARCHAR(50) DEFAULT 'not defined',
+    BOOKED INT DEFAULT 0,
+    BOOK_START VARCHAR(50) DEFAULT 'not taken',
+    BOOK_END VARCHAR(50) DEFAULT 'not taken',
+    PRIMARY KEY (BOOK_ID)
+);
+
+# create notifies table
+CREATE TABLE notifies (
+    id INT AUTO_INCREMENT,
+    rank VARCHAR(50),
+    Notifies VARCHAR(50),
+    PRIMARY KEY (id)
+);
+
+# create staffs table
+CREATE TABLE staffs (
+    STAFF_ID INT AUTO_INCREMENT,
+    NAME VARCHAR(50),
+    NO VARCHAR(50),
+    PASSWORD VARCHAR(50),
+    PRIMARY KEY (STAFF_ID)
+);
+
+CREATE TABLE staffs (
+    STUDENT_ID INT AUTO_INCREMENT,
+    NAME VARCHAR(50),
+    NO VARCHAR(50),
+    PASSWORD VARCHAR(50),
+    PRIMARY KEY (STUDENT_ID)
+);
+
+
+
+
